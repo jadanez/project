@@ -1,0 +1,51 @@
+<!-- 
+login.ejs
+* Project
+*
+* Revision History
+* John Cristopher Danez, 2022.11.29: Created -->
+
+
+
+<%- include('includes/header.ejs') %>
+  <link rel="stylesheet" href="/css/login.css">
+
+
+<%- include('includes/logobar.ejs') %>
+<%- include('includes/navlogin.ejs') %>
+
+
+<main>
+  <h1>Login</h1>
+  <form name="loginForm" method="Post" action="/loginAttempt">
+
+    <div class="loginContainer">
+        <div class = "wrapper">
+        <label for = "userName">Username: </label>
+        <input id = "userName" placeholder = "" type = "text" name = "userName" required>
+        </div>
+
+        <div class = "wrapper">
+        <label for = "uPassword">Password: </label>
+        <input id = "uPassword" placeholder = "" type = "password" name = "uPassword" required>
+        </div>
+
+        <div class = "wrapperSubmit">
+        <input type = "submit" class = "submitData" value = "Submit" id="submit"> 
+        </div>
+
+        <p> 
+          <% 
+          if (typeof(error) != 'undefined'){ %>
+            <%=error %>
+          <% } %>  
+        </p>
+    </div>
+
+  </form>
+
+
+</main>
+
+
+<%- include('includes/footer.ejs') %>

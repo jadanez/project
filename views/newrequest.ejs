@@ -1,0 +1,48 @@
+<!-- 
+newrequest.ejs
+* Project
+*
+* Revision History
+* John Cristopher Danez, 2022.11.29: Created -->
+
+
+<%- include('includes/headerwithmce.ejs') %>
+<%- include('includes/navlogin.ejs') %>
+
+<main>
+
+
+  <h1>New Request</h1>
+
+  <form name="mainForm" method="Post" action="/process" enctype="multipart/form-data">
+
+    <div class = "wrapper">
+      <label for = "uName">Name: </label>
+      <input id = "uName"  type = "text" name = "uName" required>
+    </div>
+
+    <div class = "wrapper">
+      <label for = "uContact">Email/Phone: </label>
+      <input id = "uContact"  type = "text" name = "uContact" required>
+    </div>
+
+    <div class = "wrapper">
+      <label for = "">Photo: </label>
+      <input type="file" name="uImage" id="uImage" required>
+    </div>
+
+    <div class="textArea">
+      <textarea name="description" id="description" cols="30" rows="10" required>
+      </textarea>      
+    </div>
+
+    <div class = "wrapperSubmit">
+      <input type = "submit" class = "submitData" value = "Submit" id="submit"> 
+    </div>
+
+  </form>
+
+</main>
+
+
+<%- include('includes/footer.ejs') %>

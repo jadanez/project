@@ -1,0 +1,35 @@
+<!-- 
+view.ejs
+* Project
+*
+* Revision History
+* John Cristopher Danez, 2022.11.29: Created -->
+
+
+<%- include('includes/header.ejs') %>
+  <link rel="stylesheet" href="/css/view.css">
+
+
+<%- include('includes/logobar.ejs') %>
+<%- include('includes/navlogout.ejs') %>
+
+<main>
+    <h1><%= uNumber %></h1>
+
+    <div class="ticketImage">
+        <img src="/uploads/<%= uImageName %>" alt="">
+    </div>
+
+    <div class="data">
+        <div><strong><u>Name:</u></strong>&nbsp;&nbsp; <%= uName %></div>
+        <div><strong><u>Email/Phone: </u></strong>&nbsp;&nbsp;<%= uContact %></div>
+        <div><strong><u>Issue Description:</u></strong></div>
+        <p><%- description %></p>
+    </div>
+
+  
+
+</main>
+
+
+<%- include('includes/footer.ejs') %>

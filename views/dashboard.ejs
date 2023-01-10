@@ -1,0 +1,53 @@
+<!-- 
+dashboard.ejs
+* Project
+*
+* Revision History
+* John Cristopher Danez, 2022.11.29: Created -->
+
+
+
+<%- include('includes/header.ejs') %>
+  <link rel="stylesheet" href="/css/dashboard.css">
+
+<%- include('includes/logobar.ejs') %>
+<%- include('includes/navlogout.ejs') %>
+
+<main>
+    <h1>Dashboard</h1>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email/Phone</th>
+            <th>View</th>
+            <th>Edit</th>   
+            <th>Delete</th>
+        </tr>
+
+
+    <%
+   
+        for (ticket of tickets){
+          %>
+
+          <tr>
+            <td><%= ticket.uNumber %></td>
+            <td><%= ticket.uName %></td>
+            <td><%= ticket.uContact %></td>
+
+            <td><a href="/view/<%= ticket._id%>">View</a></td>
+            <td><a href="/edit/<%= ticket._id%>">Edit </a></td>
+            <td><a href="/delete/<%= ticket._id%>">Delete</a></td>
+         </tr>
+        <%    
+      } 
+    %>
+ 
+    </table>
+</main>
+
+
+<%- include('includes/footer.ejs') %>

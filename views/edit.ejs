@@ -1,0 +1,52 @@
+<!-- 
+edit.ejs
+* Project
+*
+* Revision History
+* John Cristopher Danez, 2022.11.29: Created -->
+
+
+<%- include('includes/headerwithmce.ejs') %>
+<%- include('includes/navlogout.ejs') %>
+
+<main>
+
+  <h1>Edit Request</h1>
+
+  <form name="editForm" method="Post" action="/editProcess" enctype="multipart/form-data">
+    <input type="hidden" name = "id" value="<%= id %>" required>
+
+
+    <div class = "wrapper">
+      <label for = "uName">Name: </label>
+      <input id = "uName" placeholder = "First Name Last Name" type = "text" name = "uName" value="<%= uName  %>" required>
+    </div>
+
+    <div class = "wrapper">
+      <label for = "uContact">Email/Phone: </label>
+      <input id = "uContact" placeholder = "Contact Info (Email/ Phone)" type = "text" name = "uContact" value="<%= uContact  %>" required>
+    </div>
+
+    <div class = "wrapper">
+      <label for = "">Photo: </label>
+      <input type="file" name="uImage" id="uImage" required>
+    </div>
+
+
+    <div class="textArea">
+      <textarea name="description" id="description" cols="30" rows="10" required><%- description  %>
+      </textarea>      
+    </div>
+
+
+    <div class = "wrapperSubmit">
+      <input type = "submit" class = "submitData" value = "Submit" id="submit"> 
+    </div>
+
+
+  </form>
+
+</main>
+
+
+<%- include('includes/footer.ejs') %>

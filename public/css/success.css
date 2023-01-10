@@ -1,0 +1,15 @@
+/* success.css
+* Project 
+*
+* Revision History
+* John Cristopher Danez, 2022.11.29: Created */
+
+main{
+    height: 450px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+
+}
+main >h3{
+    text-align: center;
+}

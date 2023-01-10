@@ -1,0 +1,53 @@
+/* login.css
+* Project 
+*
+* Revision History
+* John Cristopher Danez, 2022.11.29: Created */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+.loginContainer{
+    border: 2px solid gray ;
+    border-radius: 10px;
+    width:400px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: black;
+}
+
+p{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+.wrapper{
+    /* border: 1px solid black; */
+    width: auto;
+    /* width: max-content; */
+}
+
+.wrapper label{
+    /* border: 1px solid black; */
+    display: inline-block;
+    width: 85px;
+    color: white;
+}
+
+
+.wrapper input{
+    display: inline-block;
+    width: 245px;
+}
+
+.wrapperSubmit{
+    /* border: 1px solid black; */
+    margin-bottom: 0;
+}
+
